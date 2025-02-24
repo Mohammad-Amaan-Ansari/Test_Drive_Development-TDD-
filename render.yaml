@@ -1,20 +1,20 @@
 databases:
   - name: string_calculator
-    databaseName: string_calculator_development
+    databaseName: stringCalculator_development
     user: ror
     plan: free
 
 services:
   - type: web
     plan: free
-    name: string_calculator_development
+    name: stringCalculator_development
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: string_calculator_development
+          name: stringCalculator_development
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
