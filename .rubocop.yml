@@ -1,0 +1,25 @@
+AllCops:
+  NewCops: enable
+
+Metrics/MethodLength:
+  Max: 16 # Increase limit if needed
+
+Metrics/AbcSize:
+  Max: 20 # Adjust complexity threshold
+
+Metrics/CyclomaticComplexity:
+  Max: 10 # Adjust threshold to be slightly more forgiving
+
+Metrics/PerceivedComplexity:
+  Max: 10
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"
+    - "config/environments/*.rb"
+
+Layout/LineLength:
+  Max: 120 # Keep lines within 120 characters
+
+Style/Documentation:
+  Enabled: false # Disable class documentation enforcement
