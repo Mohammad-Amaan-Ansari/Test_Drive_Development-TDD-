@@ -8,12 +8,12 @@ default: &default
 
 development:
   <<: *default
-  database: StringCalculator_development
+  database: stringcalculator_development
 
 test:
   <<: *default
-  database: StringCalculator_test
+  database: stringcalculator_test
 
 production:
   <<: *default
-  database: StringCalculator_production
+  database: stringcalculator_production
